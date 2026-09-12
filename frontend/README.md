@@ -188,7 +188,6 @@ Open a terminal and run:
 git clone https://github.com/RaJaT-OG/StatSkill-AI
 ```
 
-Replace `YOUR-GITHUB-USERNAME` with your GitHub username.
 
 ### 2. Open the project folder
 
