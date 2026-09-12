@@ -1,0 +1,32 @@
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Quiz cache / generated local data
+.quiz_cache/
+
+# Logs
+*.log
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
