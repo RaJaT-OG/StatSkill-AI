@@ -185,7 +185,7 @@ To get a local copy of StatSkill AI, clone the GitHub repository.
 Open a terminal and run:
 
 ```powershell
-git clone https://github.com/YOUR-GITHUB-USERNAME/StatSkill-AI.git
+git clone https://github.com/RaJaT-OG/StatSkill-AI
 ```
 
 Replace `YOUR-GITHUB-USERNAME` with your GitHub username.
