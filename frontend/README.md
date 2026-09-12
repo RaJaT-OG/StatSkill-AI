@@ -11,6 +11,7 @@ The platform combines competency assessment, skill-gap analysis, role-aware reco
 ## Key Features
 
 ### 1. Employee Profile
+
 Users can provide profile information such as:
 - Role
 - Designation
@@ -20,6 +21,7 @@ Users can provide profile information such as:
 The profile information is used to personalize learning recommendations.
 
 ### 2. Competency Assessment
+
 Users assess themselves across six skill areas:
 - Python
 - R
@@ -31,16 +33,18 @@ Users assess themselves across six skill areas:
 Scores are evaluated on a 0–100 scale.
 
 ### 3. Skill-Gap Analysis
+
 The Results dashboard presents:
 - Overall skill score
 - Individual skill scores
-- Strong/developing areas
+- Strong and developing areas
 - Priority focus areas
 - Visual skill progress
 
 Lower-scoring skills are highlighted as areas where focused learning can help.
 
 ### 4. Personalized Learning Recommendations
+
 StatSkill AI recommends learning opportunities based on identified skill gaps.
 
 Recommendations include:
@@ -50,6 +54,7 @@ Recommendations include:
 - Role, designation, department, and assignment context
 
 ### 5. AI Learning Plan
+
 Gemini generates a practical four-week learning plan using the user's skill gaps and profile information.
 
 The plan can include:
@@ -59,7 +64,8 @@ The plan can include:
 - Expected outcomes
 
 ### 6. AI Quiz from PDF
-Users can upload a PDF learning material and generate an AI-powered practice quiz.
+
+Users can upload PDF learning material and generate an AI-powered practice quiz.
 
 Supported quiz sizes:
 - 5 questions
@@ -69,6 +75,7 @@ Supported quiz sizes:
 The topic is detected automatically from the uploaded material; users do not need to manually select a skill.
 
 ### 7. Quiz Evaluation
+
 After completing a quiz, the platform provides:
 - Score
 - Percentage
@@ -80,12 +87,14 @@ After completing a quiz, the platform provides:
 Quiz performance can also be reflected on the Results dashboard.
 
 ### 8. Dark / Light Mode
+
 The application supports:
 - Light mode
 - Dark mode
 - Persistent theme preference across refreshes
 
 ### 9. Validation and Error Handling
+
 The application handles common user and service errors, including:
 - Missing profile information
 - Invalid assessment scores
@@ -143,8 +152,9 @@ SIH Project3/
 │   │   ├── index.css
 │   │   └── main.jsx
 │   ├── .gitignore
-│   ├── package.json
+│   ├── index.html
 │   ├── package-lock.json
+│   ├── package.json
 │   └── vite.config.js
 │
 ├── README.md
@@ -161,7 +171,42 @@ Install the following before running the project:
 
 - Python 3.x
 - Node.js and npm
+- Git
 - A Google Gemini API key
+
+---
+
+## Clone the Repository
+
+To get a local copy of StatSkill AI, clone the GitHub repository.
+
+### 1. Clone the repository
+
+Open a terminal and run:
+
+```powershell
+git clone https://github.com/YOUR-GITHUB-USERNAME/StatSkill-AI.git
+```
+
+Replace `YOUR-GITHUB-USERNAME` with your GitHub username.
+
+### 2. Open the project folder
+
+```powershell
+cd StatSkill-AI
+```
+
+### 3. Open the project in VS Code
+
+```powershell
+code .
+```
+
+If the `code` command is not available, open the `StatSkill-AI` folder manually in VS Code.
+
+### 4. Continue with the setup
+
+After cloning the repository, follow the **Backend Setup** and **Frontend Setup** sections below.
 
 ---
 
@@ -170,13 +215,18 @@ Install the following before running the project:
 Open a terminal in the backend directory:
 
 ```powershell
-cd "C:\Users\user\Documents\SIH Project3\backend"
+cd backend
 ```
 
-Create/activate the virtual environment if required:
+Create the virtual environment if required:
 
 ```powershell
 python -m venv venv
+```
+
+Activate it on Windows:
+
+```powershell
 venv\Scripts\activate
 ```
 
@@ -222,7 +272,7 @@ http://127.0.0.1:8000
 Open a second terminal:
 
 ```powershell
-cd "C:\Users\user\Documents\SIH Project3\frontend"
+cd frontend
 ```
 
 Install dependencies:
@@ -238,6 +288,29 @@ npm run dev
 ```
 
 Vite will display the local frontend URL in the terminal.
+
+---
+
+## Running the Application
+
+Run both services at the same time.
+
+### Terminal 1 — Backend
+
+```powershell
+cd backend
+venv\Scripts\activate
+uvicorn main:app --reload
+```
+
+### Terminal 2 — Frontend
+
+```powershell
+cd frontend
+npm run dev
+```
+
+Then open the local frontend URL shown by Vite.
 
 ---
 
@@ -285,7 +358,7 @@ Quiz Evidence in Results
 
 ## Development Notes
 
-The application is intended to run as two local services:
+The application runs as two local services:
 
 1. FastAPI backend
 2. React/Vite frontend
